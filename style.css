@@ -1,0 +1,44 @@
+.snake {
+    background: gray;
+    position: relative;
+    overflow: hidden;
+}
+
+.snake__item {
+    background-color:  green;
+    border: 3px double white;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 1;
+    transition-property: left, top, opacity, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.snake__food {
+    position: absolute;
+    background-color: blue;
+    border: 3px double white;
+    z-index: 2;
+    box-sizing: border-box;
+    opacity: 1;
+    transition-property: opacity, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.snake__item_in-stomach {
+    background: orange;
+    z-index: 3;
+}
+
+.snake__item_die {
+    opacity: 0;
+    background-color: red;
+}
+
+.snake__food_die {
+    opacity: 0;
+    background-color: red;
+}
